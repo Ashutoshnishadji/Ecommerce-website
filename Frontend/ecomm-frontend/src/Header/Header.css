@@ -1,109 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding-top: 0;
-        }
-
-        header{
-            display: flex;
-            justify-content: space-between;
-            color: white;
-            background-color: rgb(35, 47, 62);
-            padding: 10px;
-            text-align: center;
-            font-size: 18px;
-            margin: 0px;
-            font-family: montserrat;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Road+Rage&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: montserrat; */
+}
+.Header{
+    position: relative;
+    top: 0;
+}
 
 
-        a, button{
-            font-family: montserrat;
-            font-weight: 500;
-            font-size: 16px;
-            color: white;
-            text-decoration: none;
-            transition: all .3s ease 0s;
-            
-        }
 
-        a:hover{
-            transition: border 1px 1px;
-            border-color: white;
-        }
+header>h1{
+    text-align: center;
+    position: sticky;
+    top: 0;
+    color: white;
+    background-color: rgb(26, 26, 26);
+    padding: 12px;
+    font-family: 'Bebas Neue', cursive;
+}
 
-        nav{
-            display: flex;
-            position: sticky;
-            top: 0px;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 5%;
-            background-color: rgb(55, 71, 90);
-        }
+#space{
+    background-color: rgb(46, 46, 46);
+    padding: 1px;
+}
 
-        button{
-            color: white;
-            padding: 9px 25px;
-            background-color: rgb(228, 121, 17);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all .3s ease 0s;
-        }
 
-        button:hover{
-            color: rgb(3, 1, 107);
-            background-color: rgba(0, 54, 214, .6);
-        }
+a, button{
+    font-family: montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    transition: all .3s ease 0s;
+    
+}
 
-        input{
-            padding: 9px 25px;
-            border-radius: 50px;
-            color: rgb(160, 160, 160);
-            font-family: montserrat, sans-serif;
-            border: none;
-        }
+a:hover{
+    transition: border 1px 1px;
+    border-color: white;
+}
 
-        #srch{
-            color: white;
-            padding: 9px 18px;
-            background-color: rgb(228, 121, 17);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all .3s ease 0s;
-        }
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgb(26, 26, 26);
+}
 
-        #srch:hover{
-            background-color: rgba(228, 121, 17, .9);
-        }
 
-        main{
-            background-color: white;
-        }
+nav>a{
+    transition: all .4s ease;
+}
 
-        section{
-            color: rgb(165, 165, 165);
-            padding: 40px;
-            text-align: center;
-            font-size: 22px;
-            margin: 0px;
-            font-family: montserrat;
-            
-        }
-        .opts{
-            font-size: 25px;
-            cursor: pointer;
-        }
+nav>a:hover{
+    color: yellow;
+}
 
-        select{
-            color: white;
-            padding: 9px 18px;
-            background-color: rgb(35, 47, 62);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-family: montserrat;
-        }
+input{
+    padding: 8px 40px;
+        border-radius: 3px;
+    color: rgb(0, 0, 0);
+    font-family: montserrat, sans-serif;
+    border: none;
+    margin : 5px;
+}
+
+#srch{
+    color: white;
+    padding: 8px 18px;
+    background-color: rgb(46, 46, 46);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+
+#srch:hover{
+    background-color: rgb(85, 85, 85);
+    color: yellow;
+}
+
+.categories{
+    color: rgb(165, 165, 165);
+    
+}
+.categories>div{
+    position: relative;
+top: 100px;
+display: none;
+    padding: 10%;
+    background-color: aqua;
+    margin: 1px;
+}
+main{
+    background-color: white;
+}
+
+section{
+    color: rgb(165, 165, 165);
+    padding: 40px;
+    text-align: center;
+    font-size: 22px;
+    margin: 0px;
+    font-family: montserrat;
+    
+}
+        
+
+select{
+    color: white;
+    padding: 8px 40px;
+    background-color: rgb(46, 46, 46);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: montserrat;
+}

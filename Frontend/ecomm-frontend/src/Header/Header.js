@@ -1,47 +1,47 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 function Header() {
-  return <div>
+
+    const options = [
+        'Tech', 'Watches', 'Accesories'
+      ];
+      const defaultOption = options[0];
+
+  return <div className='Header'>
       {/* Aditya add your code here  */}
 
-<header>
-    <h1>Ecommmerce-website</h1>
+   
+     <Link to="/" className='link'>
+     <header>
+         <h1>Tech-Buy</h1>
+    </header>
+
+         </Link>   
+    <div id="space"></div>
+    
+    <nav>
+        <span className="opts">
+            <Link to="/loginSignup"  >SignIn or Register</Link>
+        </span>
+        <span className="opts">
+        <Dropdown  placeholder="Categories" options={options} />
+        </span>
         <span>
             <input type="search" placeholder="Search Here"/>
-            <a href="#" target="_blank"><input id="srch" type="submit" value="Search "/></a>
+            <a href="#" target="_blank"><input id="srch" type="submit" value="Go"/></a>
         </span>
         <span className="opts">
-            🇮🇳
-            <select className="ctg" name="ctg" id="ctg">
-                <option value="">Language</option>
-                <option value="">English</option>
-                <option value="">Hindi</option>
-
-            </select>
+            <Link to='/cart'>Orders</Link>
+            
         </span>
         <span className="opts">
-            <a href="#" target="_blank">Account & List</a>
+            <Link to='/cart'>Cart&#128722;</Link>
         </span>
-        <span className="opts">
-            <a href="#" target="_blank">Cart &#128722;</a>
-        </span>
-</header>
-
-<nav>
-        <a href="#">All</a>
-        <a href="#">Today's Deal</a>
-        <a href="#">Mobiles</a>
-        <a href="#">Electornics</a>
-        <a href="#">Fashion</a>
-        <a href="#">Books</a>
-        <a href="#">Home & Kitchen</a>
-        <a href="#">Toys & Games</a>
-        <a href="#">Others</a>
-
-</nav>
-
-
+    </nav>
      
       {/* Aditya add your code here  */}
   </div>;

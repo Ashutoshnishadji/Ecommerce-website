@@ -1,16 +1,17 @@
-const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const port = 8000;
-const Url = "mongodb://localhost:27017/";
-mongoose.connect(Url);
+// <<<<<<< HEAD
+//This file is for connecting to database
 
-app.get("/", (req, res) => {
-  res.send("This is Express Server");
-  res.end();
-});
-app.listen(port, () => {
-  console.log("Express Server is listening on Port: " + port);
-});
+const connection = () => {
+  const mongoose = require("mongoose");
+  const Url = "mongodb://localhost:27017/Ecommerce";
+  mongoose
+    .connect(Url)
+    .then(() => {
+      console.log("connected to database mongodb");
+    })
+    .catch((err) => {
+      console.log("Error", err);
+    });
+};
 
-export default app;
+module.exports = connection;
